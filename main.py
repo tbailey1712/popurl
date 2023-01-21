@@ -43,6 +43,9 @@ def main(request):
             # Delete the first word
             datastore_client.delete(first_url.key)
             print(f"{first_url['url']} deleted.")
+
+            # TODO write a log/stats entry and have a /stats page
+            
             return redirect(first_url['url'])
         else:
             # If the kind is empty
